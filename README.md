@@ -31,7 +31,7 @@ mémoire.
 ```bash
 python vol.py -f "/home/ubuntu/Desktop/Volatility Exercise/memdump1.mem" imageinfo
 ```
-![Screen](Screenshot (350).png)
+![Screen](Screenshot%20(350).png)
 
 > Astuce : si le chemin contient des espaces, l'entourer de guillemets (ou
 > échapper les espaces avec `\`), sinon Volatility ne lit pas le fichier.
