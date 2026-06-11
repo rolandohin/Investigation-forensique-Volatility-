@@ -66,6 +66,8 @@ C'est une démarche typique : `svchost.exe` est un processus système Windows
 parfaitement légitime et présent en plusieurs exemplaires — mais c'est aussi un
 nom fréquemment usurpé par des malwares pour se fondre dans la masse.
 
+![Screen](Screenshot%20(351).png)
+
 ---
 
 ## Étape 3 — Repérer le processus malveillant
@@ -81,6 +83,7 @@ malveillante (technique de *masquerading*, T1036 dans MITRE ATT&CK).
 
 Le PID de ce `svchost.exe` suspect est ainsi identifié.
 
+![Screen](Screenshot%20(352).png)
 ---
 
 ## Étape 4 — Examiner la ligne de commande d'un processus
@@ -95,6 +98,7 @@ python vol.py -f "...memdump1.mem" --profile=Win7SP1x64 cmdline -p 2352
 La ligne de commande révèle souvent l'intention : chemin d'un exécutable
 suspect, paramètres de connexion, script appelé.
 
+![Screen](Screenshot%20(353).png)
 ---
 
 ## Étape 5 — Analyser les connexions réseau (memdump2)
@@ -118,6 +122,7 @@ fichier Word télécharge une charge depuis un serveur distant. Cela correspond
 aux techniques d'accès initial par pièce jointe (*phishing*) et de
 téléchargement de charge (*ingress tool transfer*, T1105).
 
+![Screen](Screenshot%20(354).png)
 ---
 
 ## Étape 6 — Extraire et hasher le processus malveillant
@@ -140,6 +145,7 @@ service de threat intelligence (VirusTotal par exemple) pour confirmer la nature
 malveillante et identifier la famille de malware. C'est le pont entre
 l'investigation forensique et la threat intelligence.
 
+![Screen](Screenshot%20(355).png)
 ---
 
 ## Ce que ce lab illustre
